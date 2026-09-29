@@ -1,0 +1,16 @@
+﻿# Build output
+**/bin
+**/obj
+
+# Git / editor clutter
+**/.git
+**/.vs
+**/.idea
+**/.vscode
+**/*.user
+**/*.suo
+**/*.rsuser
+
+# Local environment files
+**/.env
+**/.env.*

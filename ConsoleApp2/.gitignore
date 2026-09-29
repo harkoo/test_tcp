@@ -1,0 +1,17 @@
+﻿# Build output
+bin/
+obj/
+
+# IDE / editor files
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.rsuser
+*.sln.docstates
+
+# Local secrets / environment overrides
+.env
+.env.*
+
