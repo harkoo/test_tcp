@@ -8,7 +8,7 @@ class TcpNmeaBroadcaster
     {
         // Get port and interval from arguments or use defaults
         int port = args.Length > 0 ? int.Parse(args[0]) : 8080;
-        int intervalMs = args.Length > 1 ? int.Parse(args[1]) : 1000;
+        int intervalMs = args.Length > 1 ? int.Parse(args[1]) : 10;
 
         // Check for PORT environment variable (used by Railway)
         string? envPort = Environment.GetEnvironmentVariable("PORT");
@@ -17,7 +17,7 @@ class TcpNmeaBroadcaster
             port = parsedPort;
         }
 
-        var nmeaSentence = "$GPRMC,123519,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A\r\n";
+        var nmeaSentence = "\\s:2573485,c:1614772291*0C\\!BSVDM,1,1,,A,13maq;7000151TNWKWIA3r<v00SI,0*01";
         var server = new TcpListener(IPAddress.Any, port);
         server.Start();
         Console.WriteLine($"TCP server listening on port {port}");
