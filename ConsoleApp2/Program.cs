@@ -7,7 +7,7 @@ class TcpNmeaBroadcaster
     static async Task Main(string[] args)
     {
         // Get port and interval from arguments or use defaults
-        int port = args.Length > 0 ? int.Parse(args[0]) : 5000;
+        int port = args.Length > 0 ? int.Parse(args[0]) : 8080;
         int intervalMs = args.Length > 1 ? int.Parse(args[1]) : 1000;
 
         // Check for PORT environment variable (used by Railway)
