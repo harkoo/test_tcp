@@ -17,7 +17,8 @@ class TcpNmeaBroadcaster
             port = parsedPort;
         }
 
-        var nmeaSentence = "\\s:2573485,c:1614772291*0C\\!BSVDM,1,1,,A,13maq;7000151TNWKWIA3r<v00SI,0*01\\r\\n";
+        var nmeaSentence =
+            "\\s:2573485,c:1614772291*0C\\!AIVDM,1,1,,A,13maq;7000151TNWKWIA3r<v00SI,0*01\r\n";
         var server = new TcpListener(IPAddress.Any, port);
         server.Start();
         Console.WriteLine($"TCP server listening on port {port}");
